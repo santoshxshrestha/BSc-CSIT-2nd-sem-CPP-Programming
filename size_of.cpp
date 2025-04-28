@@ -18,4 +18,11 @@ int main() {
     bool bool_val = true; 
     std::cout <<"size of boolean value is " <<sizeof(bool_val) << ".\n";
 
+    float float_in_exponential_form = 8e-4;
+    std::cout <<"The float in exponential form of 8e-4 is "<< float_in_exponential_form <<".\n";
+
+
+    //one liner is here
+    std::cout <<"The size of the int is "<<sizeof(int)<<", The size of float is "<<sizeof(float)<<", The size of the double is "<<sizeof(double) <<" and the size of char is "<<sizeof(char)<<".\n";
+
 }
