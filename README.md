@@ -1,18 +1,21 @@
 # BSc-CSIT 2nd Semester: C++ Programming
 
-This repository contains coursework, assignments, and resources for the C++ Programming course offered in the second semester of the Bachelor of Science in Computer Science and Information Technology (BSc-CSIT) program.
+This repository serves as my personal code archive and learning journey through the C++ Programming course in the second semester of my Bachelor of Science in Computer Science and Information Technology (BSc-CSIT) program.
 
 ## Overview
 
-C++ is a powerful, general-purpose programming language that extends the C programming language with object-oriented features. This course covers fundamental to advanced C++ concepts, preparing students for software development and further studies in computer science.
+This repository helps me track my progress, store my code solutions, and document my learning as I work through C++ concepts. It's organized chronologically to show my development from basic syntax to more complex programming concepts.
 
-## Repository Content
+## Repository Structure
 
-- **Lab Assignments**: Practical programming tasks to reinforce theoretical concepts
-- **Sample Programs**: Example code demonstrating specific C++ features
-- **Project Work**: Semester project implementations
+- **Lab Work**: My solutions to lab assignments
+- **Practice Code**: Personal exercises and experiments while learning different concepts
+- **Class Notes**: Code snippets and examples from lectures
+- **Projects**: Implementation of assigned projects and personal coding challenges
 
-## Topics Covered To Be Covered
+## Learning Progress
+
+I'm working through the following topics as part of my BSc-CSIT curriculum:
 
 - C++ Fundamentals and Syntax
 - Object-Oriented Programming (OOP) Concepts
@@ -24,31 +27,27 @@ C++ is a powerful, general-purpose programming language that extends the C progr
 - STL (Standard Template Library)
 - Data Structures Implementation in C++
 
-## Getting Started
+## Development Environment
 
-### Prerequisites
+### My Setup
 
-- Basic knowledge of programming concepts
-- C++ compiler (GCC, Clang, or Visual C++)
-- IDE of your choice (Visual Studio, Visual Studio Code, Code::Blocks, etc.)
+- Compiler: [g++]
+- IDE: [neovim]
+- OS: [linux]
 
-### Running the Code
+### Running My Code
 
-1. Clone this repository
-2. Navigate to the specific example or assignment directory
-3. Compile the C++ file using your compiler
-   ```
-   g++ filename.cpp -o output
-   ```
-4. Run the executable
-   ```
-   ./output
-   ```
+```
+g++ filename.cpp -o output
+./output
+```
 
-## Contributing
+## Personal Goals
 
-If you're a student taking this course, feel free to:
+- Document my learning journey through C++
+- Maintain clean, well-commented code for future reference
+- Track my progress through the semester
 
-- Submit bug fixes via pull requests
-- Add additional examples that might help others
-- Improve documentation and comments
+---
+
+_This repository is primarily for personal use to track my learning progress, but I welcome suggestions and collaboration from fellow students._
