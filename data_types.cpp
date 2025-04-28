@@ -1,4 +1,5 @@
 #include <cmath>
+#include <cstdint>
 #include <iostream>
 int main() {
     int a = 53;
@@ -24,5 +25,14 @@ int main() {
 
     //one liner is here
     std::cout <<"The size of the int is "<<sizeof(int)<<", The size of float is "<<sizeof(float)<<", The size of the double is "<<sizeof(double) <<" and the size of char is "<<sizeof(char)<<".\n";
+
+
+    //At least 32 bits (could be 32, 64, etc., whichever is fastest on your machine)
+    int_fast32_t val = 131;
+    std::cout << "The size of int_fast32_t val = 131 (fast i32) is "<<sizeof(val)<<".\n";
+
+    // Exactly 32 bits (always 4 bytes)
+    int32_t val_of_i32 = 313;
+    std::cout << "The size of int32_t val_of_i32 = 313(exactly 32 bits) is "<<sizeof(val_of_i32)<<".\n";
 
 }
