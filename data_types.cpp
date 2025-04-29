@@ -36,5 +36,4 @@ int main() {
     // Exactly 32 bits (always 4 bytes)
     int32_t val_of_i32 = 313;
     std::cout << "The size of int32_t val_of_i32 = 313(exactly 32 bits) is "<<sizeof(val_of_i32)<<".\n";
-
 }
