@@ -14,12 +14,12 @@ class Student{
                 if (marks[i]>100) {
                     cout << "lol! over achiver. You Failed ;(\n";
                     return;
-                };
+                }
 
                 if (marks[i]<32) {
                     cout << "You Failed ;(\n";
                     return;
-                };
+                }
 
                 total_marks += marks[i];
             }
@@ -30,12 +30,24 @@ class Student{
 
         };
 
+    private:
+        void cant_call_me() {
+            cout<< "How did you do that? \n";
+        }
+
+        //we can create a private method and call it in the public 
+        //method hence it can be called in the main function 
+    public:
+        void every_thing_is_possible() {
+            cant_call_me();
+        }
 };
+
 
 int main (int argc, char *argv[]) {
     Student first;
     first.calculate_percentage();
-    
-    return 0;
-}
 
+    Student second;
+    second.every_thing_is_possible();
+}
