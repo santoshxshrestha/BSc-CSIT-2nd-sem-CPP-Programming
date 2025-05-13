@@ -4,6 +4,7 @@
 // a function call, effectively enabling compile-time polymorphism. Overloaded
 // functions can be distinguished by the number, type, and order of their
 // parameters.
+#include <iomanip>
 #include <iostream>
 using namespace std;
 
@@ -14,7 +15,7 @@ void sum(int a) {
 
 void sum(int a, int b) {
   cout << "The sum of two numbers is " << a << " + " << b << " = " << a + b
-       << "   :)\n";
+       << setw(6) << ":)\n";
 }
 
 void sum(int a, int b, int c) {
