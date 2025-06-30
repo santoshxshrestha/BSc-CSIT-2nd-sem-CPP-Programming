@@ -18,14 +18,16 @@ public:
 };
 
 int main() {
+  EnergySource *basePtr;
   MotorCycle motor_cycle;
+  basePtr = &motor_cycle;
+  basePtr->energy_source();
   motor_cycle.motor_cycle();
-  motor_cycle.energy_source();
 
   cout << "-------------------------------------------\n";
-
   CableCar cable_car;
-  cable_car.cable_car();
+  basePtr = &cable_car;
+  basePtr->energy_source();
   cable_car.energy_source();
 
   return 0;
