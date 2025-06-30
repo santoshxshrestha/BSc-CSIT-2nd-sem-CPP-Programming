@@ -6,7 +6,7 @@
 // constructor automatically.
 // so we must define it ourself
 
-// BUT…
+// Shallow copy
 #include <iostream>
 
 using namespace std;
