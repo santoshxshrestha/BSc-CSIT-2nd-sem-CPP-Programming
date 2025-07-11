@@ -1,24 +1,40 @@
-{ pkgs ? import <nixpkgs> { } }:
+{
+  description = "Clang Dev Shell with Libraries";
 
-pkgs.mkShell {
-  strictDeps = true;
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
 
-  nativeBuildInputs = [
-    pkgs.gcc                # C++ compiler
-    pkgs.gdb                # Debugger
-    pkgs.pkg-config         # Dependency manager
-    pkgs.cmake              # (optional) Build system
-    pkgs.ninja              # (optional) Fast build tool
-  ];
+  outputs = { self, nixpkgs }: {
+    devShells.x86_64-linux.default = let
+      pkgs = import nixpkgs {
+        system = "x86_64-linux";
+      };
+      llvm = pkgs.llvmPackages_19;
+    in pkgs.mkShell.override {
+      stdenv = llvm.stdenv;
+    } {
+      packages = [
+        llvm.clang
+        llvm.lldb
+        llvm.clang-tools
+        pkgs.cmake
+        pkgs.bear
 
-  buildInputs = [
-    pkgs.libstdcxx          # Standard C++ library (usually already included with gcc)
-  ];
+        llvm.libcxx
+        llvm.libcxxabi
+        llvm.compiler-rt
 
-  shellHook = ''
-    echo "C++ dev shell with GCC ready."
-    export CXX=g++
-    export CC=gcc
-  '';
+        # pkgs.zlib
+        # pkgs.openssl
+      ];
+
+      shellHook = ''
+        export CXX=clang++
+        export CC=clang
+        export LD=clang++
+        echo " Clang  Dev Shell Ready"
+        echo " Using libc++ from LLVM"
+      '';
+    };
+  };
 }
 
