@@ -55,7 +55,7 @@ In C++, a stream is simply an abstraction for input and output (I/O) operations.
 It represents a flow of data—either input (from keyboard, file, etc.) or output (to screen, file, etc.).
 
 Stream classes are C++ standard library classes that handle this data flow.
-They are defined in headers like <iostream>, <fstream>, etc.
+They are defined in headers like `<iostream>`, `<fstream>`, etc.
 
 Examples: cin (input), cout (output) from <iostream>.
 
@@ -64,8 +64,6 @@ Examples: cin (input), cout (output) from <iostream>.
 well ,
 Using streams abstracts away the details of how data is read or written, making code simpler and more portable.
 
-we will talk more about it later
-
 ## File Streams:
 
 C++ uses file stream classes for file I/O.
@@ -73,9 +71,11 @@ These are available in the <fstream> header.
 
 ### Common File Stream Classes:
 
-ifstream – for reading files (input).
-ofstream – for writing files (output).
-fstream – for both reading and writing.
+- ifstream – for reading files (input).
+
+- ofstream – for writing files (output).
+
+- fstream – for both reading and writing.
 
 ---
 
@@ -94,9 +94,10 @@ In C++, we open a file using the `fstream`, `ifstream`, or `ofstream` classes pr
 fstream str("file_name_goes_here.ext", mode);
 ```
 
-> [!NOTE]
 > `str` -> The name of th stream object that you create it can be any thing,
+
 > `file_name_goes_here.ext` -> The name of the file you want to open .ext is just a of extension of the file,
+
 > `mode` -> The file mode (how you want to open or access the file ),
 
 ### Comon file modes
@@ -110,14 +111,14 @@ fstream str("file_name_goes_here.ext", mode);
 | `ios::app`    | Open file in append mode. All output is written at the end of the file.  |
 | `ios::trunc`  | If file exists, discard previous contents (used with `ios::out`).        |
 
-> [!NOTE]
 > The mode `ios::trunc` means truncate the file — in other words, erase all existing content as soon as the file is opened.
+
 > It is used with `ios::out` (write mode) to ensure you start with a clean, empty file.
 
 ### Other File Streams
 
 There are two more specialized streams too
-`ifstream`: Stands for input file stream. It is equivalent to open `fstream` in `ios`::in mode.
+`ifstream`: Stands for input file stream. It is equivalent to open `fstream` in `ios::in` mode.
 `ofstream`: Stands for output file stream. It is equivalent to opening `fstream` in `ios::out` mode.
 
 ### Examples
