@@ -16,18 +16,19 @@
         devShells.default = pkgs.mkShell {
           name = "cpp-dev-shell";
 
-          packages = with pkgs; [
-            gcc             # GNU Compiler Collection (includes g++)
-            # cmake           # Build system generator
-            # gdb             # Debugger
-            clang-tools     # Includes clangd, clang-format, etc.
-            # valgrind        # Memory checker
-            # cppcheck        # Static analysis
+          buildInputs = [
+            pkgs.clang           # includes clang++
+            pkgs.libcxx          # standard library for clang++
+            pkgs.clang-tools     # clangd, clang-format, etc.
+            pkgs.cmake
+            pkgs.bear
           ];
 
           shellHook = ''
-            echo "in dev shell"
+            export CC=clang
+            export CXX=clang++
           '';
         };
       });
 }
+
