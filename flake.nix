@@ -21,7 +21,6 @@
             pkgs.libcxx          # standard library for clang++
             pkgs.clang-tools     # clangd, clang-format, etc.
             pkgs.cmake
-            pkgs.bear
           ];
 
           shellHook = ''
