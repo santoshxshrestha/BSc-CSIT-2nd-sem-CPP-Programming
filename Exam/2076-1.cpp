@@ -41,17 +41,17 @@ public:
   void setData(string department) { this->department = department; }
 
   void display() {
-    cout << "the department o fthe coordinator is " << department << endl;
+    cout << "the department of the coordinator is " << department << endl;
   }
-}
+};
 
 int main() {
   Coordinator Santosh;
-  Santosh.setData(Science);
+  Santosh.setData("Science");
   Santosh.display();
 
   Coordinator Anish;
-  Anish.setData(csit);
-  Ansih.display();
+  Anish.setData("csit");
+  Anish.display();
   return 0;
 }
