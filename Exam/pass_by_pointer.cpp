@@ -1,3 +1,4 @@
+// pass by pointer 
 #include <iostream>
 using namespace std;
 
