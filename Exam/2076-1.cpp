@@ -1,57 +1,61 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
 class Teacher {
-public:
   int tid;
   string subject;
 
-  void setData(int id, string subject) {
-    this->tid = id;
-    this->subject = subject;
+public:
+  void readTeacher() {
+    cout << "Enter the teacher id \n";
+    cin >> tid;
+    cout << "Enter the teachers subject\n";
+    cin >> subject;
   }
 
   void display() {
-    cout << "the id of the teacher is " << tid << endl;
-    cout << "the subject that the teacher teaches is " << subject << endl;
+    cout << " The id of the teacher is " << tid << endl;
+    cout << "the subject of teacher is" << subject << endl;
   }
 };
 
 class Staff {
-public:
   int sid;
   string position;
 
-  void setData(int id, string position) {
-    this->sid = id;
-    this->position = position;
+public:
+  void readStaff() {
+    cout << "Enter the staff id of staff" << endl;
+    cin >> sid;
+    cout << "Enter the position of staff" << endl;
+    cin >> position;
   }
 
   void display() {
-    cout << "the id of the staff is " << sid << endl;
-    cout << "the position that the staff has " << position << endl;
+    cout << "The staf id is " << sid << endl;
+    cout << "the staf position is " << position << endl;
   }
 };
 
-class Coordinator : public Staff, public Teacher {
-public:
+class Coordinator : public Teacher, public Staff {
   string department;
 
-  void setData(string department) { this->department = department; }
-
+public:
+  void readCoordinator() {
+    cout << "Enter the department of the coordinator \n ";
+    cin >> department;
+  }
   void display() {
-    cout << "the department of the coordinator is " << department << endl;
+    cout << "the department of Coordinator is " << department << endl;
   }
 };
 
 int main() {
   Coordinator Santosh;
-  Santosh.setData("Science");
+  Santosh.readCoordinator();
   Santosh.display();
 
   Coordinator Anish;
-  Anish.setData("csit");
+  Anish.readCoordinator();
   Anish.display();
-  return 0;
 }
