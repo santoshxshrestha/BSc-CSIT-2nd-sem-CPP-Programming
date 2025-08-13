@@ -13,7 +13,7 @@ public:
     cin >> subject;
   }
 
-  void display() {
+  void displayTeacher() {
     cout << " The id of the teacher is " << tid << endl;
     cout << "the subject of teacher is" << subject << endl;
   }
@@ -31,7 +31,7 @@ public:
     cin >> position;
   }
 
-  void display() {
+  void displayStaff() {
     cout << "The staf id is " << sid << endl;
     cout << "the staf position is " << position << endl;
   }
@@ -42,10 +42,14 @@ class Coordinator : public Teacher, public Staff {
 
 public:
   void readCoordinator() {
+    readTeacher();
+    readStaff();
     cout << "Enter the department of the coordinator \n ";
     cin >> department;
   }
-  void display() {
+  void displayCoordinator() {
+    displayTeacher();
+    displayStaff();
     cout << "the department of Coordinator is " << department << endl;
   }
 };
@@ -53,9 +57,10 @@ public:
 int main() {
   Coordinator Santosh;
   Santosh.readCoordinator();
-  Santosh.display();
+  Santosh.displayCoordinator();
 
   Coordinator Anish;
   Anish.readCoordinator();
-  Anish.display();
+  Anish.displayCoordinator();
+  return 0;
 }
