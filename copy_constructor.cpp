@@ -14,12 +14,26 @@ using namespace std;
 class Vehicle {
 public:
   int wheels;
+  // here this is default constructor
   Vehicle() {};
+
+  // - **In function parameters:**
+  //   `void foo(int &x)` — The `&` means `x` is a **reference** (an alias for
+  //   the original variable, not a pointer).
+  //
+  // - **When using `&` with a variable:**
+  //   `int *ptr = &a;` — The `&a` gives the **memory address** of `a`, so `ptr`
+  //   is a pointer to `a`.
+  //
+  // **Key:**
+  // - `&` in a parameter type → reference
+  // - `&` before a variable name → address-of operator (pointer)
+  // They look similar but are used differently!
 
   Vehicle(Vehicle &obj) {
     wheels = obj.wheels;
     cout << "This is called copy "
-            "constructro\n";
+            "constructor\n";
   }
 };
 
