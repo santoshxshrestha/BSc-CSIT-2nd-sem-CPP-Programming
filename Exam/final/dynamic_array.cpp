@@ -14,7 +14,7 @@ int main() {
   }
   cout << "The sum of the array is " << sum << endl;
   // if the content that we are deleting is an array then we should use delete[]
-  // brackets here
+  // brackets herebracckets
   delete[] array;
   return 0;
 }
