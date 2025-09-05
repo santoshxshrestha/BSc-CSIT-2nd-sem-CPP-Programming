@@ -4,6 +4,7 @@ using namespace std;
 class Main {
 private:
   string name;
+  friend class Another;
 
 public:
   string surname;
