@@ -7,6 +7,9 @@ public:
     cout << "this is the message from the base class " << endl;
   }
   virtual void pure_virtual() = 0;
+  void another() {
+    cout << "this is  the another function out there in teh base class" << endl;
+  }
 };
 
 class Child : public Base {
